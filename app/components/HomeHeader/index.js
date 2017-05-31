@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom'
 import './index.less'
 class HomeHeader extends Component{
     render(){
@@ -12,9 +13,11 @@ class HomeHeader extends Component{
                     <i className="iconfont icon-sousuo-xianxing"></i>
                     <input type="text" placeholder="请输入城市"/>
                 </div>
-                <div className="profile">
-                    <i className="iconfont icon-yonghufill"></i>
-                </div>
+                <Link to='/login'>
+                    <div className="profile">
+                        <i className="iconfont icon-yonghufill"></i>
+                    </div>
+                </Link>
             </div>
         )
     }

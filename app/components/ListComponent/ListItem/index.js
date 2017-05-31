@@ -1,11 +1,13 @@
 
 import React,{Component} from 'react';
 import './index.less'
+import {Link} from 'react-router-dom'
 
 class ListItem extends Component{
     render() {
         let {img, title, subTitle, distance, price, number, id} = this.props.data;
         return (
+        <Link to={'/detail/'+id}>
             <div className="list-item">
                 <img src={img} alt=""/>
                 <div className="list-item-content">
@@ -18,6 +20,7 @@ class ListItem extends Component{
                     <span className="distance">{distance}</span>
                 </div>
             </div>
+        </Link>
         )
     }
 }
