@@ -10,7 +10,7 @@ import List from './subpage/List'
     render(){
         return (
             <div>
-                <HomeHeader cityName = {this.props.userInfo.cityName}/>
+                <HomeHeader history={this.props.history} cityName = {this.props.userInfo.cityName}/>
                 <Slider/>
                 <Ad/>
                 <List/>

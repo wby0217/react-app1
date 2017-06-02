@@ -6,6 +6,7 @@ import {bindActionCreators} from 'redux'
 import * as Actions from '../actions/userInfo'
 import {getStorage} from '../local/index'
 
+
  class App extends Component{
      constructor(){
          super()

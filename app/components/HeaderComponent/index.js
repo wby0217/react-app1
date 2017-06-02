@@ -14,7 +14,7 @@ class HeaderComponent extends Component{
     }
     back() {
         if(this.props.back){
-            this.props.history.push('/')
+            this.props.history.push(this.props.back)
         }else {
             this.props.history.go(-1)
         }

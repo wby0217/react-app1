@@ -40,6 +40,7 @@ class Conment extends Component{
         result.then(res=>res.json()).then(({hasMore,data})=>{
             this.setState({
                 hasMore,
+                data,
                 data:this.state.data.concat(data),
                 inLoading:false
             })

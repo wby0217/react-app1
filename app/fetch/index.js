@@ -7,3 +7,21 @@ export function get(url) {
         Accept:'application/json'
     });
 }
+
+function toUrllencoded(obj) {
+    let arr = [];
+    for (let key in obj) {
+        arr.push(`${key} = ${obj[key]}`)
+    }
+    return arr.join('&');
+}
+
+export function post(url,obj) {
+    return fetch(url,{
+        method:'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body:toUrllencoded(obj)
+    });
+}

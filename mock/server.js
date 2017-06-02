@@ -1,6 +1,8 @@
 let express = require('express');
 let app = express();
 app.listen(3000);
+let bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:true}))
 
 let ad = require('./home/ad')
 app.get('/api/ad',(req,res)=>{
@@ -20,4 +22,14 @@ app.get('/api/detail/info/:id',(req,res)=>{
 let comment = require('./detail/comment');
 app.get('/api/detail/comment/:id/:page',(req,res)=>{
     res.send(comment);
+})
+
+let orderList = require('./orderlist/orderList')
+app.get('/api/orderlist/:username',((req,res)=>{
+    res.send(orderList)
+}))
+
+app.post('/api/comment',(req,res)=>{
+    console.log(req.body)
+    res.send({msg:'OK'})
 })
