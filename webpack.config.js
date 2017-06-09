@@ -33,7 +33,7 @@ module.exports = {
     devtool:'source-map', //错误时可以提示源码错误，不会光显示bundle.js错误
     devServer: {
         proxy:{
-            '/api':'http://localhost:3002'
+            '/api':'http://localhost:3000'
         }
     }
 };

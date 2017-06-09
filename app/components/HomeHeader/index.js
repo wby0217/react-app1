@@ -17,7 +17,7 @@ class HomeHeader extends Component{
                     <i className="iconfont icon-sousuo-xianxing"></i>
                     <SearchInput fn={this.toSearch.bind(this)}/>
                 </div>
-                <Link to='/login'>
+                <Link to='/login' className="right">
                     <div className="profile">
                         <i className="iconfont icon-yonghufill"></i>
                     </div>

@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
 import reducers from '../reducers'
 
-export function configureStore(initState) {
-    return createStore(reducers,initState)
+export function configureStore() {
+    return createStore(reducers)
 }
